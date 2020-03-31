@@ -1,15 +1,8 @@
 {
  "cells": [
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Finding the present day Hubble parameter"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": 3,
+   "execution_count": 7,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -21,7 +14,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 4,
+   "execution_count": 8,
    "metadata": {
     "scrolled": true
    },
@@ -141,7 +134,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
+   "execution_count": 9,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -150,7 +143,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 6,
+   "execution_count": 17,
    "metadata": {},
    "outputs": [
     {
@@ -183,7 +176,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
+   "execution_count": 20,
    "metadata": {},
    "outputs": [
     {
@@ -201,7 +194,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
+   "execution_count": 22,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -211,7 +204,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 9,
+   "execution_count": 25,
    "metadata": {},
    "outputs": [
     {
@@ -238,56 +231,12 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 17,
+   "execution_count": 27,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "The Hubble parameter for this alternate Universe is: 10.02711206647362 km/s/Mpc\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
-    "#then we know that for linear approximation, the slope = dy/dx\n",
-    "\n",
-    "hubbleParameter_kmsMpc = fit[1]/fit[0]\n",
-    "print('The Hubble parameter for this alternate Universe is: ' + str(hubbleParameter_kmsMpc) + ' km/s/Mpc')"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Finding the age of the alternate Universe\n",
-    "\n",
-    "Given that we have a constant expansion rate, we can estimate the age of the universe by taking the reciprocal of the Hubble parameter (and accounting for the units)."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 15,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "The age of this alternate universe is: 97.33541404562493 Gyr\n"
-     ]
-    }
-   ],
-   "source": [
-    "#we will convert the hubble parameter to units of 1/s by multiplying it by the conversion factor 1 Mpc/3.08×10^19 km\n",
-    "\n",
-    "age = 1/(hubbleParameter_kmsMpc/(3.08*10**19))\n",
-    "\n",
-    "#now converting this number from seconds to Gyr using conversion 1 Gyr = 3.15576×10^16 s\n",
-    "\n",
-    "age_Gyr = age/(3.15576*10**16)\n",
-    "\n",
-    "print('The age of this alternate universe is: ' + str(age_Gyr) + ' Gyr')\n"
+    "import shutil\n",
+    "import os"
    ]
   },
   {
